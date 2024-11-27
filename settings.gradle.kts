@@ -1,3 +1,7 @@
+@file:Suppress("UnstableApiUsage")
+
+rootProject.name = "tinkoff-kotea"
+
 pluginManagement {
     repositories {
         gradlePluginPortal()
@@ -5,6 +9,7 @@ pluginManagement {
         mavenCentral()
     }
 }
+
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
@@ -13,7 +18,9 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "tinkoff-kotea"
+include(":core")
+include(":android")
+include(":compose")
+include(":logging")
 
-include(":core", ":android", ":logging", ":sample")
-include ':compose'
+include(":sample")
