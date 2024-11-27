@@ -9,5 +9,5 @@ internal inline fun <reified T : ViewModel> ViewModelStore.get(key: String, cros
         @Suppress("UNCHECKED_CAST")
         override fun <VM : ViewModel> create(modelClass: Class<VM>) = factory() as VM
     }
-    return ViewModelProvider(this, viewModelFactory).get(key, T::class.java)
+    return ViewModelProvider(this, viewModelFactory)[key, T::class.java]
 }

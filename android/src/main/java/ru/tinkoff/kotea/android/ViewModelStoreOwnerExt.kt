@@ -3,7 +3,6 @@ package ru.tinkoff.kotea.android
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelStore
 import androidx.lifecycle.ViewModelStoreOwner
-import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers
 import ru.tinkoff.kotea.android.internal.StoreViaViewModel
 import ru.tinkoff.kotea.core.Store
