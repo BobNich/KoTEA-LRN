@@ -1,9 +1,0 @@
-plugins {
-    id 'kotlin'
-    alias(libs.plugins.gradle.binary.validator)
-}
-apply from: '../gradle/publish-java.gradle'
-
-dependencies {
-    api project(":core")
-}

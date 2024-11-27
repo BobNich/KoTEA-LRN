@@ -3,10 +3,9 @@ plugins {
     alias(libs.plugins.gradle.kotlin)
     alias(libs.plugins.gradle.binary.validator)
 }
-apply from: '../gradle/publish-android.gradle'
 
 android {
-    namespace 'ru.tinkoff.kotea.compose'
+    namespace = "ru.tinkoff.kotea.compose"
 
     buildFeatures {
         compose = true
@@ -17,8 +16,8 @@ android {
 }
 
 dependencies {
-    api project(":android")
-    api project(":core")
+    api(project(":android"))
+    api(project(":core"))
 
     implementation(libs.compose.lifecycle)
     implementation(libs.compose.ui)
