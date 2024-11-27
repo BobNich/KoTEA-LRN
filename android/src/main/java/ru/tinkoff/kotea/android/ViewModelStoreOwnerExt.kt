@@ -58,19 +58,3 @@ fun <T : Store<*, *, *>> storeViaViewModel(
         factory = factory,
     )
 }
-
-@Deprecated(
-    message = "Use storeViewViewModel function with coroutine context param",
-    level = DeprecationLevel.HIDDEN
-)
-fun <T : Store<*, *, *>> storeViaViewModel(
-    dispatcher: CoroutineDispatcher = Dispatchers.Default,
-    sharedViewModelKey: String? = null,
-    factory: () -> T
-): ReadOnlyProperty<ViewModelStoreOwner, T> {
-    return StoreViaViewModel(
-        viewModelKey = sharedViewModelKey,
-        coroutineContext = dispatcher,
-        factory = factory,
-    )
-}
