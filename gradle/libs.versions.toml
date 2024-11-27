@@ -1,0 +1,36 @@
+[versions]
+android-plugin = "8.4.0"
+build-tools = "34.0.0"
+compose-compiler = "1.5.3"
+compose-lifecycle = "2.6.2"
+compose-ui = "1.5.4"
+kotlin = "1.9.10"
+binary-validator = "0.13.2"
+kotlinx-coroutines = "1.7.3"
+androidx-lifecycle = "2.6.2"
+androidx-fragment = "1.6.2"
+appcompat = "1.6.1"
+
+[libraries]
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+androidx-fragment = { module = "androidx.fragment:fragment", version.ref = "androidx-fragment" }
+androidx-fragment-ktx = { module = "androidx.fragment:fragment-ktx", version.ref = "androidx-fragment" }
+
+androidx-lifecycle-runtime = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "androidx-lifecycle" }
+androidx-lifecycle-viewmodel = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "androidx-lifecycle" }
+
+compose-lifecycle = { module = "androidx.lifecycle:lifecycle-runtime-compose", version.ref = "compose-lifecycle" }
+compose-ui = { module = "androidx.compose.ui:ui", version.ref = "compose-ui" }
+
+kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinx-coroutines" }
+kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "kotlinx-coroutines" }
+kotlinx-coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "kotlinx-coroutines" }
+
+test-junit4 = { module = "junit:junit", version = "4.13.2" }
+test-turbine = { module = "app.cash.turbine:turbine", version = "0.12.3" }
+
+[plugins]
+gradle-android-application = { id = "com.android.application", version.ref = "android-plugin" }
+gradle-android-library = { id = "com.android.library", version.ref = "android-plugin" }
+gradle-kotlin = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+gradle-binary-validator = { id = "org.jetbrains.kotlinx.binary-compatibility-validator", version.ref = "binary-validator" }

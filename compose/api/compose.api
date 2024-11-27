@@ -1,0 +1,6 @@
+public final class ru/tinkoff/kotea/compose/StateFlowExtKt {
+	public static final fun collectState (Lkotlinx/coroutines/flow/StateFlow;Landroidx/compose/runtime/Composer;I)Landroidx/compose/runtime/State;
+	public static final fun collectState (Lkotlinx/coroutines/flow/StateFlow;Lru/tinkoff/kotea/android/ui/UiStateMapper;Landroidx/compose/runtime/Composer;I)Landroidx/compose/runtime/State;
+	public static final fun mapState (Lkotlinx/coroutines/flow/StateFlow;Lru/tinkoff/kotea/android/ui/UiStateMapper;Landroidx/compose/runtime/Composer;I)Lkotlinx/coroutines/flow/StateFlow;
+}
+

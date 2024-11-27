@@ -1,0 +1,37 @@
+plugins {
+    alias(libs.plugins.gradle.android.application) apply false
+    alias(libs.plugins.gradle.android.library) apply false
+    alias(libs.plugins.gradle.kotlin) apply false
+    alias(libs.plugins.gradle.binary.validator) apply false
+}
+
+subprojects {
+    pluginManager.withPlugin("kotlin") {
+        java {
+            sourceCompatibility = JavaVersion.VERSION_17
+            targetCompatibility = JavaVersion.VERSION_17
+        }
+
+        compileKotlin {
+            kotlinOptions.jvmTarget = JavaVersion.VERSION_17.toString()
+            kotlinOptions.freeCompilerArgs += ["-Xopt-in=kotlin.RequiresOptIn"]
+        }
+    }
+    pluginManager.withPlugin("kotlin-android") {
+        android {
+            compileSdkVersion(34)
+            buildToolsVersion(libs.versions.build.tools.get())
+
+            defaultConfig {
+                minSdkVersion(21)
+                targetSdkVersion(34)
+            }
+
+            compileOptions {
+                sourceCompatibility JavaVersion.VERSION_17
+                targetCompatibility JavaVersion.VERSION_17
+            }
+            kotlinOptions.jvmTarget = JavaVersion.VERSION_17.toString()
+        }
+    }
+}
