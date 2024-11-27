@@ -1,15 +1,15 @@
 [versions]
-android-plugin = "8.4.0"
+android-plugin = "8.4.2"
 build-tools = "34.0.0"
 compose-compiler = "1.5.3"
-compose-lifecycle = "2.6.2"
-compose-ui = "1.5.4"
+compose-lifecycle = "2.8.7"
+compose-ui = "1.7.5"
 kotlin = "1.9.10"
 binary-validator = "0.13.2"
-kotlinx-coroutines = "1.7.3"
-androidx-lifecycle = "2.6.2"
-androidx-fragment = "1.6.2"
-appcompat = "1.6.1"
+kotlinx-coroutines = "1.9.0"
+androidx-lifecycle = "2.8.7"
+androidx-fragment = "1.8.5"
+appcompat = "1.7.0"
 
 [libraries]
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
