@@ -4,5 +4,5 @@ plugins {
 }
 
 dependencies {
-    api(project(":core"))
+    api(projects.core)
 }

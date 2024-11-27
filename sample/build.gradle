@@ -35,8 +35,8 @@ android {
 
 dependencies {
 
-    implementation(project(":android"))
-    implementation(project(":logging"))
+    implementation(projects.android)
+    implementation(projects.logging)
 
     implementation libs.androidx.appcompat
 }

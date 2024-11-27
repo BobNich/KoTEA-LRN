@@ -16,8 +16,8 @@ android {
 }
 
 dependencies {
-    api(project(":android"))
-    api(project(":core"))
+    api(projects.android)
+    api(projects.core)
 
     implementation(libs.compose.lifecycle)
     implementation(libs.compose.ui)
